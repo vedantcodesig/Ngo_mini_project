@@ -1,7 +1,7 @@
 <p align="center">
   <img 
-    width="456"
-    height="250"
+    width="400"
+    height="400"
     src="https://www.ourvadodara.com/wp-content/uploads/2012/10/CS-NGOAni.gif"
   >
 </p>
