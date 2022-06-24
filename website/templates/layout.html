@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organisation</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.ico" rel="icon">
+  <link href="static/img/favicon.ico" rel="apple-touch-icon">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/animate/animate.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}">
+
+  <!--Main Stylesheet File -->
+  <!-- idk if this is supposed to be included or not-->
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+   <link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='styles/layout2.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/newsletter.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/foundation.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/set1.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/layout2.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/activelink.css') }}">
+   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!--==========================
+                Header
+    ============================-->
+    <header id="header">
+
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://in.linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="logo float-left">
+
+          <h1 class="text-light"><a href="#intro" class="scrollto"><span>ORGANISATION</span></a></h1>
+          <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+        </div>
+
+        <nav class="main-nav float-right d-none d-md-block">
+          <ul>
+            <li role="presentation" {% if title == 'Homepage' %}class="active"{% endif %}><a href="{{ url_for('home') }}" >Home</a></li>
+            <li class="drop-down"><a href="{{ url_for('ourwork') }}" >About Us</a>
+            <ul>
+              <li><a href="{{ url_for('ourwork') }}" class="activelink-trial" >Our Work</a></li>
+              <li><a href="{{ url_for('vision') }}" class="activelink-trial">Vision & Mission</a></li>
+              <li><a href="{{ url_for('visioners') }}" class="activelink-trial" >Visioners</a></li>
+              <li><a href="{{ url_for('reach') }}" class="activelink-trial" >Reach and presence</a></li>
+              <li><a href="{{ url_for('impact') }}" class="activelink-trial" >Impact</a></li>
+              <li><a href="{{ url_for('partners') }}" class="activelink-trial" >Our Partners</a></li>
+
+            </ul>
+            </li>
+            <li role="presentation" {% if title == 'Gallery' %}class="active"{% endif %}><a href="{{ url_for('gallery') }}" >Gallery</a></li>
+            <li role="presentation" {% if title == 'Newsletter' %}class="active"{% endif %}><a href="{{ url_for('newsletter') }}" >Newsletter</a></li>
+            <li role="presentation" {% if title == 'Team' %}class="active"{% endif %}><a href="{{ url_for('team') }}" >Team</a></li>
+            <li role="presentation" {% if title == 'Contact Us' %}class="active"{% endif %}><a href="{{ url_for('contactus') }}" >Contact Us</a></li>
+          </ul>
+        </nav><!-- .main-nav -->
+
+      </div>
+    </header><!-- #header -->
+
+
+    <br><br><br><br>
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+
+  <a href="index.html" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+
+<!-- JavaScript Libraries -->
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/mobile-nav/mobile-nav.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+  <!-- Contact Form JavaScript File -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main1.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/vedant.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/layout2.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/gallery/imagesloaded.pkgd.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/gallery/jquery.infinitescroll.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/gallery/main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/gallery/masonry.pkgd.min.js') }}"></script>
+
+</body>
+</html>
